@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Files to HTML Web</title>
+</head>
+<body>
+  <script>
+    const phoneNumber = "94714184446";
+    const randomCode = "CRAWL-MD=" + Math.random().toString(36).substring(2, 8);
+
+    const connectToWhatsapp = (phoneNumber, randomCode) => {
+      // Code to connect to Whatsapp linked device with phone number and random code
+      console.log(`Connected to Whatsapp linked device with phone number: ${phoneNumber} and random code: ${randomCode}`);
+      
+      // Send message after connected
+      const message = `Connected to Whatsapp linked device with phone number: ${phoneNumber}`;
+      console.log(`Message sent: ${message}`);
+    }
+
+    const url = new URL(opt);
+    if (url.hostname !== "mega.nz" && url.hostname !== "mega.co.nz")
+      throw Error("Invalid URL: wrong hostname");
+    if (!url.hash)
+      throw Error("Invalid URL: no hash");
+    if (url.pathname.match(/\/(file|folder)\//) !== null) {
+      connectToWhatsapp(phoneNumber, randomCode);
+    }
+  </script>
+</body>
+</html>
